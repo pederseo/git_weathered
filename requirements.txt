@@ -1,1 +1,3 @@
-pip install requets
+requests
+black 
+flake8
