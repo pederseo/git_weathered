@@ -22,28 +22,25 @@ def parse_arguments():
     
     return parser.parse_args()
 
-def main():
-    args = parse_arguments()
 
-    try:
-        weather_data = get_weather(args.pais, args.ciudad)
+args = parse_arguments()
 
-    except ValueError as e:
-        print(e)
+try:
+    weather_data = get_weather(args.pais, args.ciudad)
+
+except:
+    print("error al traer informacion de la api")
     
-    if args.formato == 'texto':
-        output = formato_texto(weather_data ,args.pais, args.ciudad)
+if args.formato == 'texto':
+    output = formato_texto(weather_data ,args.pais, args.ciudad)
 
-    elif args.formato == 'json':
-        output = formato_json(weather_data ,args.pais, args.ciudad)
+elif args.formato == 'json':
+    output = formato_json(weather_data ,args.pais, args.ciudad)
 
-    elif args.formato == 'csv':
-        output = formato_csv(weather_data ,args.pais, args.ciudad)
+elif args.formato == 'csv':
+    output = formato_csv(weather_data ,args.pais, args.ciudad)
 
-    else:
-        print('ingresa un formato valido (json, texto, csv)')
+else:
+    print('ingresa un formato valido (json, texto, csv)')
     
-    print(output)
-
-if __name__ == "__main__":
-    main()
+print(output)

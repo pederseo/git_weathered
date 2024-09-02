@@ -61,12 +61,3 @@ Esto mostrará una lista de comandos disponibles y opciones para interactuar con
 
 ## Autor
 - Olaf Pedersen Torales
-
----
-
-Este README cubre todos los aspectos clave que mencionaste. Puedes personalizarlo aún más si lo deseas.
-# instrucciones de instalacion
-- python -m venv venv
-- venv\Scripts\activate
-- pip install -r requirements.txt
-- run clima.py
